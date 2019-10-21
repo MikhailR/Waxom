@@ -5,6 +5,8 @@ font-family: 'Raleway', sans-serif;*/
 
 @import url("section-top_and_header.css");
 
+@import url("section-ideas.css");
+
 * {
 	padding: 0;
 	margin: 0;
@@ -28,7 +30,36 @@ body {
 	min-width: 320px;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding-left: 15px;
-	padding-right: 15px;
-	text-align: center;
+	padding-left: 11px;
+	padding-right: 11px;
+}
+
+.section__title {
+	font-family: 'Raleway', sans-serif;
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 30px;
+	color: #555;
+}
+
+.section__text {
+	line-height: 28px;
+	padding: 0 205px;
+}
+
+@media (max-width: 980px) {
+	.section__text {
+		padding: 0 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	.section__title {
+		font-size: 24px;
+		line-height: 24px;
+	}
+
+	.section__text {
+		line-height: 18px;
+	}
 }
