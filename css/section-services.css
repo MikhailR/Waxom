@@ -1,0 +1,131 @@
+.services {
+	padding: 80px 0;
+}
+
+.services__block {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.services__element {
+	-ms-flex-preferred-size: 23.5%;
+	    flex-basis: 23.5%;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	text-align: center;
+	padding-bottom: 28px;
+	position: relative;
+}
+
+.services__image {
+	height: 50px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
+}
+
+.services__image--second img {
+	-webkit-filter: grayscale(1) invert(0.9);
+	        filter: grayscale(1) invert(0.9);
+}
+
+.services__title {
+	font-family: 'Raleway', sans-serif;
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 22px;
+	color: #555;
+	margin: 25px 0 10px;
+}
+
+.services__text {
+	font-size: 14px;
+}
+
+.services__text::after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 3px;
+	background-color: #f1eee9;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	-webkit-transform: translate(-50%,0);
+	    -ms-transform: translate(-50%,0);
+	        transform: translate(-50%,0);
+	-webkit-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.services__element:hover > .services__image img {
+	-webkit-filter: invert(1) sepia(0.5);
+	        filter: invert(1) sepia(0.5);
+} 
+
+.services__element--second:hover .services__image--second img {
+	-webkit-filter: invert(0.01) grayscale(0);
+	        filter: invert(0.01) grayscale(0);
+}
+
+.services__element:hover > .services__title {
+	color: #c7b299;
+}
+
+.services__element:hover > .services__text::after {
+	background-color: #c7b299;
+	width: 25%;
+}
+
+@media screen and (max-width: 980px) {
+	.services {
+		padding: 50px 0;
+	}
+
+	.services__element {
+		padding: 0 10px 20px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.services {
+		padding: 20px 0;
+	}
+
+	.services__block {
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+	}
+
+	.services__element {
+		-ms-flex-preferred-size: 48%;
+		    flex-basis: 48%;
+		padding: 0 20px 15px;
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.services__block {
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
+
+	.services__element {
+		-ms-flex-preferred-size: 90%;
+		    flex-basis: 90%;
+		padding: 0 10px 15px;
+	}
+}
