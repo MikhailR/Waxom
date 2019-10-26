@@ -130,3 +130,46 @@ function openMenu() {
 menuButton.addEventListener('click', openMenu);
 
 /*-------------------------------------------------*/
+
+/*Прокрутка изображений в блоке категорий товаров (тип коллекции)*/ 
+var buttonBlogPrev = document.querySelector('.blog__arrow--prev');
+var buttonBlogNext = document.querySelector('.blog__arrow--next');
+var blogArray = document.querySelectorAll('.blog__element');
+var d = 0, e;
+function blogNext(e) {
+	e.preventDefault();
+ 	var blogOpacity = getComputedStyle(blogArray[d]);
+	if(blogOpacity.opacity === '1')
+	{ 	
+		if((blogArray.length - d) > 3)
+	  		{	  			
+			  	blogArray[d].style.order = d+1;
+	  			d++;
+	  		}
+	} else if(blogOpacity.opacity === '0.99')
+			{ 	
+				if((blogArray.length - d) > 2)
+			  		{	  			
+					  	blogArray[d].style.order = d+1;
+			  			d++;
+			  		}
+			}
+		else { 	
+				if((blogArray.length - d) > 1)
+			  		{	  			
+					  	blogArray[d].style.order = d+1;
+			  			d++;
+			  		}
+			}
+};
+function blogPrev(e) {
+	e.preventDefault();
+ 	if(d>0)
+ 	{
+ 		e = d - 1;
+  		blogArray[e].style.order = 0;
+  		d--;
+  	}
+ };
+buttonBlogNext.addEventListener('click', blogNext);
+buttonBlogPrev.addEventListener('click', blogPrev);
