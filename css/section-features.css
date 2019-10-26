@@ -1,0 +1,134 @@
+.features {
+	background-color: #fbfaf8;
+	padding-top: 78px;
+}
+
+.features .wrap {
+/*	border: 1px solid blue;*/
+}
+
+.features__block {
+	margin-left: 50px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+/*	border: 1px solid red;*/
+}
+
+.features__image {
+	-ms-flex-preferred-size: 37.7%;
+	    flex-basis: 37.7%;
+}
+
+.features__image img {
+/*	border: 1px solid green;*/
+	display: block;
+	width: 100%;
+}
+
+.features__info {
+	-ms-flex-preferred-size: 62.3%;
+	    flex-basis: 62.3%;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding: 115px 0 0 30px;
+/*	border: 1px solid orange;*/
+}
+
+.features__text {
+	line-height: 28px;
+	margin: 30px 0;
+}
+
+.features__list {
+	list-style: none;
+/*	border: 1px solid blue;*/
+	margin-left: 50px;
+}
+
+.features__list li {
+	position: relative;
+}
+
+.features__icon {
+	display: block;
+	width: 21px;
+	height: 21px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+
+.features__property {
+	line-height: 32px;
+	padding-left: 50px;
+/*	border: 1px solid yellow;*/
+}
+
+@media screen and (max-width: 1200px) {
+	.features__block {
+		margin-left: 0;
+	}
+
+	.features__info {
+		padding: 70px 10px 0 30px;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	.features {
+		padding-top: 50px;
+	}
+
+	.features__info {
+		padding: 10px;
+	}
+
+	.features__text {
+		line-height: 24px;
+		margin: 10px 0;
+	}
+
+	.features__list {
+		margin-left: 10px;
+	}
+
+	.features__property {
+		line-height: 24px;
+		padding-left: 30px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.features {
+		padding-top: 20px;
+	}
+
+	.features__block {
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
+
+	.features__info {
+		-ms-flex-preferred-size: 100%;
+		    flex-basis: 100%;
+		margin-top: 20px;
+	}
+
+	.features .section__title {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.features__text, .features__property {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}

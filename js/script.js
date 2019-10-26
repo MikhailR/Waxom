@@ -107,7 +107,26 @@ function ideasPrev() {
 buttonIdeasNext.addEventListener('click', ideasNext);
 buttonIdeasPrev.addEventListener('click', ideasPrev);
 
+/*Выпадающее меню-"гамбургер" в разделе Portfolio*/ 
+var menuButton = document.querySelector('.works__burger-menu');
+var menuOpenButton = document.querySelector('.burger-menu__burger');
+var menu = document.querySelector('.burger-menu__small');
+var menuItems = document.querySelectorAll('.burger-menu__item');
 
+function reset(e) {
+	e.preventDefault();
+	menu.classList.add('hidden');
+	menuOpenButton.classList.remove('burger-menu__burger--close');
+}
 
+function openMenu() {
+	menu.classList.remove('hidden');
+	menuOpenButton.classList.add('burger-menu__burger--close');
+	for(var i=0; i<menuItems.length; i++) {
+		menuItems[i].addEventListener('click', reset);
+	}
+};
 
+menuButton.addEventListener('click', openMenu);
 
+/*-------------------------------------------------*/

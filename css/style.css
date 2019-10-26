@@ -7,6 +7,10 @@ font-family: 'Raleway', sans-serif;*/
 @import url("section-services.css");
 @import url("section-ideas.css");
 @import url("section-works.css");
+@import url("section-video.css");
+@import url("section-features.css");
+@import url("section-counters.css");
+@import url("section-test.css");
 
 * {
 	padding: 0;

@@ -1,0 +1,123 @@
+.counters {
+	background: -webkit-gradient(linear, left top, right top, from(#211b19), to(#4e3427));
+	background: -o-linear-gradient(left, #211b19, #4e3427);
+	background: linear-gradient(to right, #211b19, #4e3427);
+	padding: 65px 0 55px;
+}
+
+.counters__block {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.counters__element {
+	-ms-flex-preferred-size: 20%;
+	    flex-basis: 20%;
+	text-align: center;
+	position: relative;
+}
+
+.counters__element::after {
+	content: "";
+	display: block;
+	width: 30px;
+	height: 2px;
+	background-color: #fff;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	-webkit-transform: translate(-50%,-5px);
+	    -ms-transform: translate(-50%,-5px);
+	        transform: translate(-50%,-5px);
+}
+
+.counters__image {
+	width: 55px;
+	height: 50px;
+	margin: 0 auto 22px;
+}
+
+.counters__image img {
+	display: block;
+	margin: 0 auto;
+}
+
+.counters__amount {
+	font-size: 48px;
+	font-weight: 200;
+	line-height: 48px;
+	color: #fff;
+}
+
+.counters__partition {
+	font-size: 14px;
+	line-height: 20px;
+	color: #c7b299;
+	text-transform: uppercase;
+	margin: 10px 0 32px;
+}
+
+@media screen and (max-width: 980px) {
+	.counters {
+		padding: 20px 0;
+	}
+
+	.counters__image {
+		margin-bottom: 10px;
+	}
+
+	.counters__amount {
+		font-size: 40px;
+		line-height: 40px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.counters__block {
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
+
+	.counters__element {
+		-ms-flex-preferred-size: 33%;
+		    flex-basis: 33%;
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.counters__element::after {
+		-webkit-transform: translate(-50%,0);
+		    -ms-transform: translate(-50%,0);
+		        transform: translate(-50%,0);
+	}
+
+	.counters__image {
+		width: 35px;
+		height: 30px;
+	}
+
+	.counters__image img {
+		width: 100%;
+	}
+
+	.counters__amount {
+		font-size: 32px;
+		line-height: 32px;
+	}
+
+	.counters__partition {
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.counters__element {
+		-ms-flex-preferred-size: 50%;
+		    flex-basis: 50%;
+	}
+}
