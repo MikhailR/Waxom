@@ -1,0 +1,245 @@
+.contacts {
+	background-color: #191919;
+	padding: 80px 0 75px;
+}
+
+.contacts__block {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.contacts__element {
+	text-align: left;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding: 0 4px;
+}
+
+.contacts__element {
+	-ms-flex-preferred-size: 25.5%;
+	    flex-basis: 25.5%;
+}
+
+.contacts__dribbble {
+	-ms-flex-preferred-size: 23.5%;
+	    flex-basis: 23.5%;
+}
+
+.contacts__title {
+	font-family: 'Raleway', sans-serif;
+	font-size: 24px;
+	font-weight: 800;
+	line-height: 24px;
+	color: #fff;
+	margin: 27px 0 15px;
+}
+
+.contacts__logo {
+	width: 61.5%;
+}
+
+.contacts__logo img {
+	display: block;
+	width: 100%;
+}
+
+.contacts__text {
+	font-size: 14px;
+	color: #555;
+	margin: 25px 0 20px;
+}
+
+.contacts__button {
+	display: inline-block;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	color: #d1d1d1;
+	padding-right: 10px;
+	-webkit-transition-duration: 0.5s;
+	     -o-transition-duration: 0.5s;
+	        transition-duration: 0.5s;
+}
+
+.contacts__button span {
+	position: relative;
+}
+
+.contacts__button span::after {
+	content: "";
+	display: block;
+	border: 5px solid transparent;
+	border-left-color: #d1d1d1;
+	position: absolute;
+	right: 0; 
+	top: 50%;
+    -webkit-transform: translate(200% ,-50%);
+        -ms-transform: translate(200% ,-50%);
+            transform: translate(200% ,-50%);
+    -webkit-transition-duration: 0.5s;
+         -o-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+}
+
+.contacts__button:hover {
+	color: #00bff3;
+}
+
+.contacts__button:hover > span::after {
+	border-left-color: #00bff3;
+}
+
+.contacts__info,
+.contacts__posts,
+.contacts__twitter {
+	padding-right: 26px;
+}
+
+.contacts__post {
+	padding: 15px 0 17px;
+}
+
+.contacts__post:not(:last-child) {
+	border-bottom: 1px solid #252525;
+}
+
+.post__date {
+	font-size: 12px;
+	line-height: 20px;
+	color: #363636;
+	margin-bottom: 3px;
+	-webkit-transition-duration: 0.5s;
+	     -o-transition-duration: 0.5s;
+	        transition-duration: 0.5s;
+}
+
+.post__text {
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 20px;
+	color: #555;
+	-webkit-transition-duration: 0.5s;
+	     -o-transition-duration: 0.5s;
+	        transition-duration: 0.5s;
+}
+
+.contacts__post:hover .post__date {
+	color: #fff;
+}
+
+.contacts__post:hover .post__text {
+	color: #c7b299;
+}
+
+.contacts__twitter {
+	padding-right: 26px;
+}
+
+.contacts__twit {
+	padding: 12px 0 17px;
+}
+
+.contacts__twit:not(:last-child) {
+	border-bottom: 1px solid #252525;
+}
+
+.twit__text {
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 20px;
+	color: #555;
+}
+
+.twit__text span {
+	color: #00bff3;
+	-webkit-transition-duration: 0.5s;
+	     -o-transition-duration: 0.5s;
+	        transition-duration: 0.5s;
+}
+
+.twit__date {
+	font-size: 12px;
+	line-height: 20px;
+	color: #363636;
+}
+
+.contacts__twit:hover .twit__text span {
+	color: #959595;
+}
+
+.contacts__gallery {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	margin-top: 28px;
+}
+
+.contacts__image {
+	-ms-flex-preferred-size: 47.5%;
+	    flex-basis: 47.5%;
+	margin-bottom: 10px;
+}
+
+.contacts__image img {
+	display: block;
+	width: 100%;
+}
+
+@media screen and (max-width: 980px) {
+	.contacts {
+		padding: 50px 0;
+	}
+
+	.contacts__block {
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+	}
+
+	.contacts__element {
+		-ms-flex-preferred-size: 50%;
+		    flex-basis: 50%;
+	}
+
+	.contacts__posts, .contacts__twitter {
+		-webkit-box-ordinal-group: 2;
+		    -ms-flex-order: 1;
+		        order: 1;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.contacts {
+		padding: 20px 0;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.contacts__element {
+		-ms-flex-preferred-size: 100%;
+		    flex-basis: 100%;
+		-webkit-box-ordinal-group: 1;
+		    -ms-flex-order: 0;
+		        order: 0;
+	}
+
+	.contacts__logo {
+		margin: 0 auto;
+		width: 40%;
+	}
+
+	.contacts__title {
+		text-align: center;
+	}
+
+	.contacts__gallery {
+		width: 90%;
+		margin: 0 auto;
+	}
+}

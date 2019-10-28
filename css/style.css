@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:400,500,600,800&display=swap');
 
-/*font-family: 'Montserrat', sans-serif;
-font-family: 'Raleway', sans-serif;*/
-
 @import url("section-top_and_header.css");
 @import url("section-services.css");
 @import url("section-ideas.css");
@@ -11,14 +8,13 @@ font-family: 'Raleway', sans-serif;*/
 @import url("section-features.css");
 @import url("section-counters.css");
 @import url("section-blog.css");
+@import url("section-partners.css");
+@import url("section-contacts.css");
+@import url("section-footer.css");
 
 * {
 	padding: 0;
 	margin: 0;
-}
-
-img {
-	border: none;
 }
 
 body {
